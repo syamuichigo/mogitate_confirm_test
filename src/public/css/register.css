@@ -1,0 +1,125 @@
+.register_header {
+    text-align: center;
+}
+
+.register_header-title {
+    width: 760px;
+    text-align: center;
+}
+
+.header-title_text {}
+
+.register {
+    max-width: 760px;
+    justify-content: center;
+    margin: auto;
+}
+
+.register-content {
+    margin: 30px auto;
+    width: 100%;
+}
+
+.register-content_title {
+    display: flex;
+    align-items: center;
+    margin: 10px auto;
+    width: 100%;
+}
+
+.register-content_name {
+    font-size: 16px;
+    font-weight: 300;
+    color: #4B4B4B;
+    margin: 5px;
+}
+
+.register-content_required {
+    width: 34px;
+    height: 18px;
+    margin: 5px;
+    background-color: #FD0707;
+    font-size: 12px;
+    font-weight: 300;
+    color: #FFFFFF;
+}
+
+.register-content_required-option {
+    font-size: 12px;
+    font-weight: 300;
+    color: #FD0707;
+}
+
+.register-content_input {
+    width: 760px;
+    height: 43px;
+    border-radius: 5px;
+    padding: 11px 10px;
+    border: solid 1px #e0dfde;
+}
+
+.register-content_input-file {
+    display: flex;
+    cursor: pointer;
+}
+
+.register-content_season {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.season {
+    display: flex;
+    margin-right: 50px;
+}
+
+.register-content_season-input {}
+
+.season-text {
+    font-size: 16px;
+    font-weight: 300;
+    color: #4B4B4B;
+    margin-left: 5px;
+}
+
+.register-content_input-content {
+    width: 760px;
+    height: 160px;
+    border-radius: 5px;
+    padding: 11px 10px;
+    border: solid 1px #e0dfde;
+}
+
+.register-content_error {
+    display: flex;
+    color: red;
+}
+
+.button {
+    margin: 50px auto;
+}
+
+.button-back {
+    width: 200px;
+    height: 50px;
+    padding: 20px 100px;
+    border-radius: 5px;
+    background-color: #e0dfde;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4B4B4B;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button-register {
+    border-radius: 5px;
+    padding: 20px 100px;
+    background-color: #F5C800;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4B4B4B;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
