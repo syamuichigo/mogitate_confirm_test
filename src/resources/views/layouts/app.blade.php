@@ -13,7 +13,7 @@
 <body>
     <header class="header">
         <div class="header_inner">
-            <p class="header_inner-text">mogitate</p>
+            <a href="/products" class="header_inner-text">mogitate</a>
         </div>
     </header>
     @yield('content')

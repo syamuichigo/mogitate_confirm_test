@@ -56,19 +56,19 @@
                 </div>
                 <div class="register-content_season">
                     <div class="season">
-                        <input class="register-content_season-input" type="radio" name="season" value="1" id="">
+                        <input class="register-content_season-input" type="checkbox" name="season" value="1" id="">
                         <label class="season-text">春</label>
                     </div>
                     <div class="season">
-                        <input class="register-content_season-input" type="radio" name="season" value="2" id="">
+                        <input class="register-content_season-input" type="checkbox" name="season" value="2" id="">
                         <label class="season-text">夏</label>
                     </div>
                     <div class="season">
-                        <input class="register-content_season-input" type="radio" name="season" value="3" id="">
+                        <input class="register-content_season-input" type="checkbox" name="season" value="3" id="">
                         <label class="season-text">秋</label>
                     </div>
                     <div class="season">
-                        <input class="register-content_season-input" type="radio" name="season" value="4" id="">
+                        <input class="register-content_season-input" type="checkbox" name="season" value="4" id="">
                         <label class="season-text">冬</label>
                     </div>
                 </div>

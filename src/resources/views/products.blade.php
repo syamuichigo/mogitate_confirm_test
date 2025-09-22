@@ -16,28 +16,29 @@
     </div>
     <div class="main">
         <div class="search">
-            <form action="/products/search" method="post" class="input-content">
-                <input type="text" class="input_text">
-                <button type="submit" class="input_button">検索</button>
+            <form action="/products/search" method="get" class="input-content">
+                @csrf
+                <div class="search-content">
+                    <input type="text" name="keyword" class="input_text">
+                    <button type="submit" class="input_button">検索</button>
+                </div>
             </form>
-            <!-- ここに並べ替え表示のコード -->
+            <form action="/products/sort" method="get">
+                <div class="sort">
+                    <p class="sort-title">価格順で表示</p>
+                    <select class="sort-input" name="" id="">
+                        <option value="">高い順で表示</option>
+                        <option value="">低い順で表示</option>
+                    </select>
+                    <button class="sort-button">適用</button>
+                </div>
+            </form>
         </div>
         <div class="product">
             @foreach($products as $product)
-            <!-- <form action="/product/{productid}" method="get">
-                <button type="submit" class="product_inner" name="{{$product['id']}}">
-                    <div class="product-img">
-                        {{$product['image']}}
-                    </div>
-                    <div class="product-content">
-                        <p class="product-content_name">{{$product['name']}}</p>
-                        <p class="product-content_price">￥{{$product['price']}}</p>
-                    </div>
-                </button>
-            </form> -->
-            <a href="/product/{id}" class="product_inner">
+            <a href="/products/{{$product['id']}}" class="product_inner">
                 <div class="product-img">
-                    {{$product['image']}}
+                    <img src="{{$product['image']}}" alt="{{$product['name']}}">
                 </div>
                 <div class="product-content">
                     <p class="product-content_name">{{$product['name']}}</p>

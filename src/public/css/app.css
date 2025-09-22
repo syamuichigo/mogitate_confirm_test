@@ -17,4 +17,6 @@
     margin: auto;
     height: 33px;
     align-items: center;
+    text-decoration: none;
+    cursor: pointer;
 }

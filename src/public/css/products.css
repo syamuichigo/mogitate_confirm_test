@@ -36,8 +36,6 @@
     color: black;
 }
 
-.register_button:hover {}
-
 .main {
     margin-top: 30px;
     display: flex;
@@ -57,7 +55,7 @@
 .input_text {
     border-radius: 25px;
     border: 1px #E0DFDE;
-    color: #FFFFFF;
+    color: #4B4B4B;
     width: 100%;
     height: 50px;
     box-shadow: 1px -1px rgba(0, 0, 0, 0.1);
@@ -75,6 +73,40 @@
     font-size: 16px;
     font-weight: 600;
     color: #4B4B4B;
+    cursor: pointer;
+}
+
+.sort {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.sort-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.sort-input {
+    border-radius: 10px;
+    color: #4B4B4B;
+    width: 100%;
+    height: 50px;
+}
+
+.sort-button {
+    text-align: center;
+    margin: 20px auto;
+    width: 60%;
+    height: 44px;
+    background-color: #F5C800;
+    border-radius: 5px;
+    box-shadow: 1px -1px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #4B4B4B;
+    cursor: pointer;
 }
 
 .product {
@@ -115,7 +147,8 @@
     font-weight: 400;
     color: #4B4B4B;
 }
-svg.w-5.h-5{
+
+svg.w-5.h-5 {
     width: 30px;
     height: 30px;
 }

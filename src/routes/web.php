@@ -17,5 +17,6 @@ use App\Http\Controllers\ProductController;
 route::get('products', [ProductController::class, 'products']);
 route::get('register', [ProductController::class, 'register']);
 route::post('product/register', [ProductController::class, 'store']);
-route::get('/product/{id}', [ProductController::class, 'dateil']);
-// route::get('dateil',[ProductController::class,'content']);
+route::get('/products/{productid}', [ProductController::class, 'detail']);
+route::get('/products/search',[ProductController::class,'search']);
+route::get('/products/sort',[ProductController::class,'sort']);

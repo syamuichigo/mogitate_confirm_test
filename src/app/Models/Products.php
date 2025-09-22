@@ -20,4 +20,10 @@ class Products extends Model
     {
         return $this->belongsToMany(Seasons::class);
     }
+    public function scopeKeywordSearch($query, $keyword)
+    {
+        if (!empty($keyword)) {
+            $query->where('name', 'like', '%' . $keyword . '%');
+        }
+    }
 }
