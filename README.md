@@ -40,5 +40,5 @@ php artisan db:seed
 ## ER図
 ![alt text](<名称未設定ファイル - draw.io - Google Chrome 2025_09_22 8_58_21.png>)
 ## URL
-- 開発環境：http://localhost/
+- 開発環境：http://localhost/products
 - phpMyAdmin:：http://localhost:8080/

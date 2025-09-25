@@ -10,9 +10,8 @@ class ProductController extends Controller
 {
     public function products()
     {
-        $pagenate = Products::Paginate(6);
-        $products = Products::all();
-        return view('products', compact('products', 'pagenate'));
+        $products = Products::Paginate(6);
+        return view('products', compact('products'));
     }
     public function search(Request $request)
     {
@@ -47,6 +46,7 @@ class ProductController extends Controller
     public function detail($productid)
     {
         $products = Products::find($productid);
+        dd($products);
         return view('detail', compact('products'));
     }
     public function update(RegisterRequest $request) {}
