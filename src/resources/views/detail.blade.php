@@ -5,11 +5,9 @@
 @endsection
 
 @section('content')
-
-@foreach($products as $product)
 <div class="dateil-title">
     <a href="/product" class="dateil-title_text">商品一覧</a>
-    <p class="dateil-title_name"> > {{$product['name']}}</p>
+    <p class="dateil-title_name"> > {{$products['name']}}</p>
 </div>
 <form action="/products/update" class="dateil">
     @csrf
@@ -21,7 +19,7 @@
         <div class="content">
             <div class="content-inner">
                 <p class="dateil-content_name">商品名</p>
-                <input type="text" name="name" class="dateil-content_input" value="{{$product['name']}}">
+                <input type="text" name="name" class="dateil-content_input" value="{{$products['name']}}">
                 <div class="dateil-content_error">
                     @error('name')
                     {{ $message }}
@@ -30,7 +28,7 @@
             </div>
             <div class="content-inner">
                 <p class="dateil-content_name">値段</p>
-                <input type="text" name="price" class="dateil-content_input" value="{{$product['price']}}">
+                <input type="text" name="price" class="dateil-content_input" value="{{$products['price']}}">
                 <div class="dateil-content_error">
                     @error('name')
                     {{ $message }}
@@ -67,12 +65,11 @@
     </div>
     <div class="dateil-description">
         <p class="dateil-description_title">商品説明</p>
-        <textarea name="description" id="" class="dateil-description_content">{{$product['description']}}</textarea>
+        <textarea name="description" id="" class="dateil-description_content">{{$products['description']}}</textarea>
     </div>
     <div class="button">
         <a href="/product" class="button-back">戻る</a>
         <button type="submit" class="button-update">変更を保存</button>
     </div>
 </form>
-@endforeach
 @endsection

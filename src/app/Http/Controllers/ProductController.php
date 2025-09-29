@@ -15,8 +15,8 @@ class ProductController extends Controller
     }
     public function search(Request $request)
     {
-        $contents = Products::all()->keywordSearch($request->keyword)->get();
-        return view('products', compact('contents'));
+        $products = Products::keywordSearch($request->keyword)->pagenate(6);
+        return view('products', compact('products'));
     }
     public function sort(Request $request)
     {
@@ -46,7 +46,6 @@ class ProductController extends Controller
     public function detail($productid)
     {
         $products = Products::find($productid);
-        dd($products);
         return view('detail', compact('products'));
     }
     public function update(RegisterRequest $request) {}
