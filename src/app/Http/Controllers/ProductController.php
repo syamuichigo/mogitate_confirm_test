@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\RegisterRequest;
 use App\Models\Products;
+use App\Models\Seasons;
+use App\Models\ProductsSeason;
 
 class ProductController extends Controller
 {
@@ -39,14 +41,15 @@ class ProductController extends Controller
     public function store(RegisterRequest $request)
     {
         $products = $request->all();
-        // $products = $request->only('name', 'price', 'image', 'season', 'description');
         Products::create($products);
         return redirect('products')->with('message', '新しく商品をを追加しました');
     }
     public function detail($productid)
     {
-        $products = Products::find($productid);
-        return view('detail', compact('products'));
+        $products = Products::all()->find($productid);
+        $seasons = Seasons::all();
+        $products_season = ProductsSeason::where('product_id')->get('season_id');
+        return view('detail', compact('products', 'seasons', 'products_season'));
     }
     public function update(RegisterRequest $request) {}
 }

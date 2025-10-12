@@ -44,6 +44,21 @@
     font-size: 16px;
     font-weight: 300;
     color: #4B4B4B;
+    width: 100%;
+}
+
+.dateil-content_season {
+    display: flex;
+    width: 100;
+    align-items: center;
+}
+
+.dateil-content_input-season {
+    margin-left: 20px;
+}
+
+.season-text {
+    margin-right: 50px;
 }
 
 .dateil-content_input {

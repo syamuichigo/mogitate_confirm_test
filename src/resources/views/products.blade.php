@@ -22,29 +22,27 @@
                     <input type="text" name="keyword" class="input_text">
                     <button type="submit" class="input_button">検索</button>
                 </div>
-            </form>
-            <form action="/products/sort" method="get">
                 <div class="sort">
                     <p class="sort-title">価格順で表示</p>
-                    <select class="sort-input" name="" id="">
+                    <select class="sort-input" name="sort" id="sort">
                         <option value="">高い順で表示</option>
                         <option value="">低い順で表示</option>
                     </select>
-                    <button class="sort-button">適用</button>
                 </div>
             </form>
         </div>
         <div class="product">
             @foreach($products as $product)
-            <a href="/products/{{$product['id']}}" class="product_inner">
-                <div class="product-img">
-                    <img src="{{$product['image']}}" alt="{{$product['name']}}">
-                </div>
-                <div class="product-content">
-                    <p class="product-content_name">{{$product['name']}}</p>
-                    <p class="product-content_price">￥{{$product['price']}}</p>
-                </div>
-            </a>
+            <div class="product_inner">
+                <a href="/products/{{$product['id']}}" class="product_link">
+                    <img src="{{$product['image']}}" alt="{{$product['name']}}" class="product_img">
+                    <div class="product-content">
+                        <p class="product-content_name">{{$product['name']}}</p>
+                        <p class="product-content_price">￥{{$product['price']}}</p>
+                    </div>
+                </a>
+            </div>
+
             @endforeach
         </div>
     </div>

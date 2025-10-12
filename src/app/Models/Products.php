@@ -16,15 +16,8 @@ class Products extends Model
         'description'
     ];
 
-    public function products_seasons()
+    public function seasons()
     {
-        return $this->belongsToMany(Seasons::class);
-    }
-    public function scopeKeywordSearch($query, $keyword)
-    {
-        if (!empty($keyword)) {
-            return $query->where('name', 'like', '%' . $keyword . '%');
-        }
-        return $query;
+        return $this->belongsToMany(Seasons::class, 'products_seasons', 'product_id', 'season_id');
     }
 }

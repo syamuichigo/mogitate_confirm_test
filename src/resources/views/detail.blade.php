@@ -13,7 +13,7 @@
     @csrf
     <div class="dateil-inner">
         <div class="img">
-            <img src="" alt="" class="dateil-content_img">
+            <img src="{{$products['image']}}" alt="{{$products['name']}}" class="dateil-content_img">
             <input type="file" name="image" id="" class="dateil-content_img-input">
         </div>
         <div class="content">
@@ -37,24 +37,16 @@
             </div>
             <div class="dateil-inner">
                 <p class="dateil-content_name">季節</p>
+                @foreach ($seasons as $season)
                 <div class="dateil-content_season">
-                    <div class="season">
-                        <input class="dateil-content_season-input" type="radio" name="season" id="">
-                        <label class="season-text">春</label>
-                    </div>
-                    <div class="season">
-                        <input class="dateil-content_season-input" type="radio" name="season" id="">
-                        <label class="season-text">夏</label>
-                    </div>
-                    <div class="season">
-                        <input class="dateil-content_season-input" type="radio" name="season" id="">
-                        <label class="season-text">秋</label>
-                    </div>
-                    <div class="season">
-                        <input class="dateil-content_season-input" type="radio" name="season" id="">
-                        <label class="season-text">冬</label>
-                    </div>
+                    @if(isset($products_season))
+                    <input type="checkbox" id="season" value="{{$season['id']}}" name="season[]" checked class="dateil-content_input-season">
+                    @else
+                    <input type="checkbox" id="season" value="{{$season['id']}}" name="season[]" class="dateil-content_input-season">
+                    @endif
+                    <label for="season" class="season-text">{{$season['name']}}</label>
                 </div>
+                @endforeach
                 <div class="dateil-content_error">
                     @error('season')
                     {{ $message }}

@@ -10,4 +10,9 @@ class Seasons extends Model
     use HasFactory;
 
     protected $fillable = ['name'];
+    
+    public function products()
+    {
+        return $this->belongsToMany(Products::class ,'products_seasons', 'product_id', 'season_id');
+    }
 }
