@@ -48,7 +48,8 @@ class ProductController extends Controller
     {
         $products = Products::all()->find($productid);
         $seasons = Seasons::all();
-        $products_season = ProductsSeason::where('product_id')->get('season_id');
+        $products_season = ProductsSeason::where('product_id', $productid)->pluck('season_id')->toArray();
+
         return view('detail', compact('products', 'seasons', 'products_season'));
     }
     public function update(RegisterRequest $request) {}

@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Products_Season extends Model
+class ProductsSeason extends Model
 {
     use HasFactory;
 
     protected $table = 'products_season';
-    
+
     public function products()
     {
         return $this->belongsTo(Products::class, 'product_id');

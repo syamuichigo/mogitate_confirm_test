@@ -39,12 +39,14 @@
                 <p class="dateil-content_name">季節</p>
                 @foreach ($seasons as $season)
                 <div class="dateil-content_season">
-                    @if(isset($products_season))
-                    <input type="checkbox" id="season" value="{{$season['id']}}" name="season[]" checked class="dateil-content_input-season">
+                    @if(in_array($season['id'], $products_season))
+                    <input type="checkbox" id="season{{$season['id']}}" value="{{$season['id']}}" name="season[]"
+                        class="dateil-content_input-season" checked>
                     @else
-                    <input type="checkbox" id="season" value="{{$season['id']}}" name="season[]" class="dateil-content_input-season">
+                    <input type="checkbox" id="season{{$season['id']}}" value="{{$season['id']}}" name="season[]"
+                        class="dateil-content_input-season">
                     @endif
-                    <label for="season" class="season-text">{{$season['name']}}</label>
+                    <label for="season{{$season['id']}}" class="season-text">{{$season['name']}}</label>
                 </div>
                 @endforeach
                 <div class="dateil-content_error">
